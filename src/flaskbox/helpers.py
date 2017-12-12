@@ -7,8 +7,7 @@ import yaml
 
 def _create_yml_file(file_name: str = 'flaskbox.yml'):
     """
-    :param file_name: An yml file, default is flaskbox.yml
-    Create an yml file.
+    :param file_name: Name for a file.
     """
     if os.path.isfile(file_name):
         path = os.path.abspath(file_name)
