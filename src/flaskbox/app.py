@@ -11,8 +11,18 @@ class Application:
 
     def __start_server(self):
         """Custom method, for starting flask application"""
-        self.app.run()
+        self.app.run(debug=True)
 
     def run(self):
         """Run the server"""
         return self.__start_server()
+
+
+# Instance of Application class
+application = Application()
+
+
+def start_app():
+    """Start the mock server
+    """
+    return application.run()

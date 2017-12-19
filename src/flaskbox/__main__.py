@@ -1,5 +1,6 @@
 import click
 
+from .app import start_app
 from .helpers import create_init_file
 
 
@@ -13,7 +14,7 @@ def cli(run, init, start):
     if init:
         create_init_file()
     if start:
-        pass
+        start_app()
 
 
 if __name__ == '__main__':
