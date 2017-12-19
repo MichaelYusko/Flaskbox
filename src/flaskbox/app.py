@@ -1,13 +1,18 @@
 from flask import Flask
 
+from .reader import ApplicationReader
+
 
 class Application:
-    def __init__(self, application):
-        self.app = application
+    """Main class"""
+    def __init__(self):
+        self.reader = ApplicationReader()
+        self.app = Flask(self.reader.name)
 
-    def __start_server(self, app):
-        app.run()
+    def __start_server(self):
+        """Custom method, for starting flask application"""
+        self.app.run()
 
     def run(self):
-        f = Flask(__name__)
-        return self.__start_server(f)
+        """Run the server"""
+        return self.__start_server()
