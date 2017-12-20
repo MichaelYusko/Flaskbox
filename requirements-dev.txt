@@ -3,3 +3,4 @@ isort
 flask
 pyaml
 click
+pytest
