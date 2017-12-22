@@ -1,4 +1,4 @@
-from flaskbox.reader_helper import get_routes, get_name
+from flaskbox.reader_helper import get_name, get_routes
 
 data = [
     {'application': {'name': 'Flaskbox API'}},
