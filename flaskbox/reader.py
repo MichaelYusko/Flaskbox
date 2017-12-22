@@ -18,7 +18,6 @@ class ApplicationReader:
             yml = yaml.load(config)
         return yml
 
-
     @property
     def name(self):
         """Get name of application name

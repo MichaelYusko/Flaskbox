@@ -1,4 +1,4 @@
-from flaskbox.helpers import  create_init_file
+from flaskbox.helpers import create_init_file
 
 
 def test_init_file(tmpdir):
