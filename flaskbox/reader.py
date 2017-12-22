@@ -1,6 +1,8 @@
 """Reader stuff"""
 import yaml
+
 from flaskbox.reader_helper import get_name, get_routes
+
 
 class ApplicationReader:
     """
@@ -31,7 +33,6 @@ class ApplicationReader:
             name = 'Flaskbox API'
         return name
 
-
     @property
     def routes(self):
         """
@@ -39,5 +40,3 @@ class ApplicationReader:
         """
         routes = get_routes(self._read())
         return routes
-
-print(ApplicationReader().routes)
