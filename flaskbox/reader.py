@@ -14,13 +14,20 @@ class ApplicationReader:
         """Read the yml file
         :return: The yml file in dictionary representation
         """
-        with open(self.app_yml, 'r') as config:
-            yml = yaml.load(config)
-        return yml
+        try:
+            with open(self.app_yml, 'r') as config:
+                yml = yaml.load(config)
+            return yml
+        except FileNotFoundError:
+            return None
 
     @property
     def name(self):
         """Get name of application name
         :return: An name of application
         """
-        return self._read()['application']['name']
+        name = 'Flaskbox API'
+        if self._read() is None:
+            return name
+        else:
+            return self._read()

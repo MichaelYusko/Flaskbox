@@ -1,7 +1,7 @@
 import click
 
-from .app import start_app
-from .helpers import create_init_file
+from flaskbox.application import start_app
+from flaskbox.helpers import create_init_file
 
 
 @click.command()
