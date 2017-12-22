@@ -7,7 +7,7 @@ class Application:
     """Main class"""
     def __init__(self):
         self.reader = ApplicationReader()
-        self.app = Flask('lol')
+        self.app = Flask(self.reader.name)
 
     def __start_server(self):
         """Custom method, for starting flask application"""
