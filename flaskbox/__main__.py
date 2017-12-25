@@ -1,7 +1,6 @@
 import click
 
-from flaskbox.application import start_app
-from flaskbox.helpers import create_init_file
+from flaskbox.generators import YamlGenerator
 
 
 @click.command()
@@ -10,11 +9,11 @@ from flaskbox.helpers import create_init_file
 @click.option('--start', is_flag=True, help='Run your mock API')
 def cli(run, init, start):
     if run:
-        print('Your API is running...')
+        pass
     if init:
-        create_init_file()
+        YamlGenerator.create_file()
     if start:
-        start_app()
+        pass
 
 
 if __name__ == '__main__':
