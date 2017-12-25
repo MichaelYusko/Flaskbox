@@ -4,7 +4,7 @@ from flaskbox.decorators import if_file_exists
 from flaskbox.helpers import create_init_file
 
 
-class YamlGenerator:
+class YAMLGenerator:
     """Yaml generator class"""
 
     @staticmethod

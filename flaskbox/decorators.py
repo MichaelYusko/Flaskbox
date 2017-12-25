@@ -2,10 +2,7 @@
 import os
 import sys
 
-from flaskbox.colors import ccolors
-
-file_exists_message = ccolors.OK_GREEN.value + 'flaskbox.yml' \
-                      + ccolors.ENDC.value + ' already exists'
+from flaskbox.messages import file_exists_message, not_exists_message
 
 
 def if_file_exists(func):
@@ -20,3 +17,14 @@ def if_file_exists(func):
             sys.exit(1)
         return func(*args, **kwargs)
     return file_exists
+
+
+def file_not_exists(func):
+    """File not exists"""
+    def not_exists(*args, **kwargs):
+        try:
+            func(*args, **kwargs)
+        except FileNotFoundError:
+            print(not_exists_message)
+            sys.exit(1)
+    return not_exists
