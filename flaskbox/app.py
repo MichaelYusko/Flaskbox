@@ -1,6 +1,7 @@
 """Application stuff"""
-from flaskbox.reader import Config
 from flask import Flask
+
+from flaskbox.reader import Config
 
 
 class Application:
@@ -13,4 +14,6 @@ class Application:
         """Start a mock server"""
         return self.app.run()
 
+
+# Object of Application class
 application = Application

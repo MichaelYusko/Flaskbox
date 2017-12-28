@@ -1,7 +1,7 @@
 import click
 
-from flaskbox.generators import YAMLGenerator
 from flaskbox.app import application
+from flaskbox.generators import YAMLGenerator
 
 
 @click.command()

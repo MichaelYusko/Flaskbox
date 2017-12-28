@@ -1,7 +1,7 @@
 """Reader stuff"""
 
 from flaskbox.decorators import file_not_exists
-from flaskbox.reader_helper import read_file, get_name
+from flaskbox.reader_helper import get_name, read_file
 
 
 class YAMLBaseReader:
