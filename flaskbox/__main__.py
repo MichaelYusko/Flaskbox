@@ -1,6 +1,7 @@
 import click
 
 from flaskbox.generators import YAMLGenerator
+from flaskbox.app import application
 
 
 @click.command()
@@ -10,7 +11,8 @@ def cli(init, start):
     if init:
         YAMLGenerator.create_file()
     if start:
-        pass
+        app = application()
+        app.run_server()
 
 
 if __name__ == '__main__':

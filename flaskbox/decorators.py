@@ -22,8 +22,9 @@ def if_file_exists(func):
 def file_not_exists(func):
     """File not exists"""
     def not_exists(*args, **kwargs):
+        """If file not exists, return the message"""
         try:
-            func(*args, **kwargs)
+            return func(*args, **kwargs)
         except FileNotFoundError:
             print(not_exists_message)
             sys.exit(1)
