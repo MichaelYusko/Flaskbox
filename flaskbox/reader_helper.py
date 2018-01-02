@@ -32,3 +32,12 @@ def get_routes(data):
         if 'route' in obj:
             routes.append(obj)
     return routes
+
+
+def get_routes_name(data):
+    """
+    :param data: An array with route objects
+    :return: An name of route
+    """
+    for obj in data:
+        return obj['route']['name']
