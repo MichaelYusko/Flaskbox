@@ -15,7 +15,6 @@ def get_name(data):
     :param data: An array with data of application
     :return: An application name
     """
-    print(data)
     name = None
     for obj in data:
         if 'application' in obj:
