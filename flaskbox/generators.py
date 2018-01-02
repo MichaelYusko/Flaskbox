@@ -1,9 +1,10 @@
 """Generator stuff"""
 
+from flask import Blueprint, jsonify
+
+from flaskbox.config import config
 from flaskbox.decorators import if_file_exists
 from flaskbox.helpers import create_init_file
-from flaskbox.config import config
-from flask import Blueprint, jsonify
 
 
 class YAMLGenerator:
@@ -23,7 +24,7 @@ class BlueprintGenerator:
         self.config = config
 
     def response(self):
-        return jsonify({'data': {'message': [1,2,3,4]}})
+        return jsonify({'data': {'message': [1, 2, 3, 4]}})
 
     def blueprint(self):
         return self.bp
