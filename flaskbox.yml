@@ -1,5 +1,0 @@
-- application:
-    name: Flaskbox API
-- route:
-    default: array
-    name: users
