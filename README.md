@@ -1,2 +1,2 @@
 # Flaskbox
-Easy and fast tool for mock API server, with fake data.
+Easy and fast tool for mock an API, with fake data.
