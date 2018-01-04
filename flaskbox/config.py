@@ -1,20 +1,20 @@
 from flaskbox.reader import YAMLBaseReader
-from flaskbox.reader_helper import get_name, get_routes
 
 
 class Config(YAMLBaseReader):
     """Config class which will collect an mock data"""
-    def __init__(self):
-        self.conf = self.read()
+
+    def _get_config(self):
+        return super().read()
 
     @property
     def name(self):
-        name = get_name(self.conf)
+        name = self.get_name(self._get_config)
         return name
 
     @property
     def routes(self):
-        routes = get_routes(self.conf)
+        routes = self.get_routes(self._get_config)
         return routes
 
 
