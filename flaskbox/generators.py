@@ -13,11 +13,17 @@ class YAMLGenerator:
     @staticmethod
     @if_file_exists
     def create_file():
+        """
+        :return: The flaskbox.yml file
+        """
         """Create the init file"""
         return create_init_file()
 
 
 class BlueprintGenerator:
+    """
+        Warning:: Just mocked the flow, class will be rewritten
+    """
     def __init__(self, name):
         self.name = name
         self.bp = Blueprint(name, __name__)
