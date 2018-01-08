@@ -1,6 +1,11 @@
--  application:
+- application:
     name: Flaskbox API
 
--  route:
+- route:
+    data: array
     name: users
-    default: array
+
+- route:
+    data: array
+    name: books
+

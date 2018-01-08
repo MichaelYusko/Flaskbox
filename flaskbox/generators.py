@@ -24,17 +24,20 @@ class BlueprintGenerator:
     """
         Warning:: Just mocked the flow, class will be rewritten
     """
-    def __init__(self, name):
-        self.name = name
-        self.bp = Blueprint(name, __name__)
-        self.config = config
 
     def response(self):
-        return jsonify({'data': {'message': [1, 2, 3, 4]}})
+        # TODO Add a fake data, based on type.
+        return jsonify({'data': [1, 2, 3, 4, 5, 6]})
 
-    def blueprint(self):
-        return self.bp
+    def make_blueprints(self):
+        blueprints = []
+        for ob in config.routes:
+            bp = Blueprint(ob['route']['name'], __name__)
+            route_name = '/' + ob['route']['name'],
+            bp.add_url_rule(route_name, 'response', self.response)
+            blueprints.append(bp)
+        return blueprints
 
-    def make_blueprint(self):
-        self.bp.add_url_rule('/', 'index', self.response)
-        return self.bp
+
+# instance of blueprint class
+blueprint = BlueprintGenerator()

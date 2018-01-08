@@ -9,12 +9,12 @@ class Config(YAMLBaseReader):
 
     @property
     def name(self):
-        name = self.get_name(self._get_config)
+        name = self.get_name(self._get_config())
         return name
 
     @property
     def routes(self):
-        routes = self.get_routes(self._get_config)
+        routes = self.get_routes(self._get_config())
         return routes
 
 
