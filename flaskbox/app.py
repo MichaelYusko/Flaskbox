@@ -2,7 +2,7 @@
 from flask import Flask
 
 from flaskbox.config import Config
-from flaskbox.generators import BlueprintGenerator
+from flaskbox.generators import blueprint
 
 
 class Application:
@@ -12,7 +12,10 @@ class Application:
         self.app = Flask(self.config.name)
 
     def add_blueprints(self):
-        self.app.register_blueprint(BlueprintGenerator('/').make_blueprint())
+        bp = blueprint.make_blueprints()
+        for obj in bp:
+            self.app.register_blueprint(obj)
+        return self.app
 
     def run_server(self):
         """Start a mock server"""
