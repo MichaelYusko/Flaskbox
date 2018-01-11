@@ -18,5 +18,9 @@ class Config(YAMLBaseReader):
         return routes
 
 
+class RouteConfig(Config):
+    pass
+
+
 # Instance of config object
 config = Config()
