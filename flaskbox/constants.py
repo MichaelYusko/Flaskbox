@@ -11,9 +11,9 @@ BOLD = '\033[1m'
 UNDERLINE = '\033[4m'
 
 
-###################
-# ERROR MESSAGES
-###################
+###########################
+# ERROR MESSAGES CONSTANTS
+###########################
 BASE_ERROR_MSG = '\n\nAll available commands:\n' \
            'flaskbox --init   \tInit the flaskbox.yml file' \
            '\nflaskbox --start    \tRun your mock Server\n'
