@@ -1,0 +1,4 @@
+click==6.7
+flask==0.12.2
+pyaml==17.10.0
+Faker==0.8.8
