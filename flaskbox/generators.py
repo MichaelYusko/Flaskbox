@@ -21,20 +21,23 @@ class YAMLGenerator:
 
 
 class BlueprintGenerator:
-    """
-        Warning:: Just mocked the flow, class will be rewritten
-    """
+    """Blueprint generator"""
 
     def response(self):
         # TODO Add a fake data, based on type.
         return jsonify({'data': [1, 2, 3, 4, 5, 6]})
 
     def make_blueprints(self):
+        """"
+        Iterate the config routes object,
+        and make an Blueprint objects, also add into the blueprints array.
+        :return: An array with Blueprint objects
+        """
         blueprints = []
-        for ob in config.routes:
-            bp = Blueprint(ob['route']['name'], __name__)
-            route_name = '/' + ob['route']['name'],
-            bp.add_url_rule(route_name, 'response', self.response)
+        for route in config.routes:
+            name = config.get_route_name(route)
+            bp = Blueprint(name, __name__)
+            bp.add_url_rule(name, 'response', self.response)
             blueprints.append(bp)
         return blueprints
 

@@ -34,10 +34,9 @@ class YAMLBaseReader:
                 routes.append(obj)
         return routes
 
-    def get_routes_name(self, data):
+    def get_route_name(self, data):
         """
-        :param data: An array with route objects
+        :param data: An route object
         :return: An name of route
         """
-        for obj in data:
-            return obj['route']['name']
+        return '/' + data['route']['name'] if data['route']['name'] else None

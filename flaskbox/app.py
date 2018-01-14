@@ -13,8 +13,8 @@ class Application:
 
     def add_blueprints(self):
         bp = blueprint.make_blueprints()
-        for obj in bp:
-            self.app.register_blueprint(obj)
+        for route in bp:
+            self.app.register_blueprint(route)
         return self.app
 
     def run_server(self):
