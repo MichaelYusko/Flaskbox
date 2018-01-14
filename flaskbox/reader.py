@@ -23,7 +23,8 @@ class YAMLBaseReader:
                 name = obj['application']['name']
         return name
 
-    def get_routes(self, data):
+    @staticmethod
+    def get_routes(data):
         """
         :param data: An array with data of application
         :return: An array with route objects.
@@ -34,7 +35,8 @@ class YAMLBaseReader:
                 routes.append(obj)
         return routes
 
-    def get_route_name(self, data):
+    @staticmethod
+    def get_route_name(data):
         """
         :param data: An route object
         :return: An name of route
