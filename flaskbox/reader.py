@@ -12,7 +12,8 @@ class YAMLBaseReader:
         """Read the flaskbox.yml file"""
         return read_file()
 
-    def get_name(self, data):
+    @staticmethod
+    def get_name(data):
         """
         :param data: An array with data of application
         :return: An application name
