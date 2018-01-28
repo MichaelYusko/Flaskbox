@@ -4,6 +4,7 @@ from flask import Blueprint, jsonify
 
 from flaskbox.config import config
 from flaskbox.decorators import if_file_exists
+from flaskbox.fake_data import fake_data
 from flaskbox.helpers import create_init_file
 
 
@@ -24,8 +25,11 @@ class BlueprintGenerator:
     """Blueprint generator"""
 
     def response(self):
-        # TODO Add a fake data, based on type.
-        return jsonify({'data': [1, 2, 3, 4, 5, 6]})
+        data = None
+        for route in config.routes:
+            fields = config.get_type(route)
+            data = fake_data.generate_value(fields)
+        return jsonify({'data': data})
 
     def make_blueprints(self):
         """"
