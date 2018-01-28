@@ -43,3 +43,11 @@ class YAMLBaseReader:
         :return: An name of route
         """
         return '/' + data['route']['name'] if data['route']['name'] else None
+
+    @staticmethod
+    def get_type(data):
+        """
+        :param data: An route object
+        :return: An name of route
+        """
+        return data['route']['type']

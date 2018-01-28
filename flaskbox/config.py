@@ -17,6 +17,11 @@ class Config(YAMLBaseReader):
         routes = self.get_routes(self._get_config())
         return routes
 
+    @property
+    def value_type(self):
+        value_type = self.get_type(self._get_config())
+        return value_type
+
 
 class RouteConfig(Config):
     pass
