@@ -1,11 +1,5 @@
 - application:
     name: Flaskbox API
-
 - route:
-    data: array
     name: users
-
-- route:
-    data: array
-    name: books
-
+    type: string
