@@ -5,7 +5,16 @@ from flaskbox.reader_helper import read_file
 
 
 class YAMLBaseReader:
-    """Reader main class"""
+    """Base reader class, which working with the flaskbox yaml file
+
+        Methods::
+            read Read and return an dict object with information
+                 based on flaskbox yaml file
+            get_name An name of application
+            get_routes Return an array with dict objects
+            get_route_name Return a name of route
+            get_type return data type of route, not completed yet.
+    """
 
     @file_not_exists
     def read(self):

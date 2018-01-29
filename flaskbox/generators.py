@@ -9,7 +9,11 @@ from flaskbox.helpers import create_init_file
 
 
 class YAMLGenerator:
-    """Yaml generator class"""
+    """Generator class for the flaskbox stuff
+
+        Methods::
+            create_file Create the flaskbox yaml file
+    """
 
     @staticmethod
     @if_file_exists
@@ -22,7 +26,14 @@ class YAMLGenerator:
 
 
 class BlueprintGenerator:
-    """Blueprint generator"""
+    """Class for a blueprints stuff
+
+        Methods::
+            response Return an fake data base on data type,
+                     not completed yet
+            make_blueprints Make a blueprint object,
+                            add route name, and fake data.
+    """
 
     def response(self):
         data = None
