@@ -29,8 +29,10 @@ class BlueprintGenerator:
     """Class for a blueprints stuff
 
         Methods::
-            response Return an fake data base on data type, not completed yet
-            make_blueprints Make a blueprint object, add route name, and fake data.
+            response Return an fake data base on data type,
+                     not completed yet
+            make_blueprints Make a blueprint object,
+                            add route name, and fake data.
     """
 
     def response(self):
