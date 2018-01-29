@@ -2,11 +2,11 @@ from faker import Faker
 
 
 class FakeDate:
-    """Class for generating an fake data
-    """
+    """Class for generating an fake data"""
     def __init__(self):
         self.fake_data = Faker()
 
+    # default data type values
     _default_types = ('string', 'array', 'integer', 'array')
 
     def generate_value(self, type_value: str):
