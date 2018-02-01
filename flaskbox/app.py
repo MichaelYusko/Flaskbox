@@ -15,6 +15,7 @@ class Application:
     def __init__(self):
         self.config = Config()
         self.app = Flask(self.config.name)
+        self.port = self.config.port
 
     def add_blueprints(self):
         """
@@ -30,7 +31,7 @@ class Application:
         :return: Start an flask server
         """
         self.add_blueprints()
-        return self.app.run()
+        return self.app.run(port=self.port)
 
 
 # Object of Application class

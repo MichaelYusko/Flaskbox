@@ -29,6 +29,11 @@ class Config(YAMLBaseReader):
         return name
 
     @property
+    def port(self):
+        port = self.get_port(self._get_config())
+        return port
+
+    @property
     def routes(self):
         """
         :return: Return an array with route objects

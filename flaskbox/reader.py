@@ -34,6 +34,16 @@ class YAMLBaseReader:
         return name
 
     @staticmethod
+    def get_port(data, port=5000):
+        for obj in data:
+            if 'application' in obj:
+                try:
+                    port = obj['application']['port']
+                except KeyError:
+                    pass
+        return port
+
+    @staticmethod
     def get_routes(data):
         """
         :param data: An array with data of application
