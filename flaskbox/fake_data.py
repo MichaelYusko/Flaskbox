@@ -7,7 +7,10 @@ class FakeDate:
         self.faker = Faker()
 
     # default data type values
-    _default_types = ('string', 'array', 'integer', 'array')
+    _default_types = (
+        'string', 'array', 'integer', 'boolean',
+        'float'
+    )
 
     def _set_value(self, field, key):
         """
