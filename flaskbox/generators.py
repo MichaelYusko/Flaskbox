@@ -35,11 +35,16 @@ class BlueprintGenerator:
                             add route name, and fake data.
     """
 
-    def response(self):
+    @staticmethod
+    def response():
+        """
+        :return: Return an response, based on fields, see fake_data.FakeData class
+        """
         data = None
         for route in config.routes:
-            fields = config.get_type(route)
-            data = fake_data.generate_value(fields)
+            fields = config.get_fields(route)
+            fake_objects = fake_data.generate_value(fields)
+            data = dict([(key, field[key]) for field in fake_objects for key in field])
         return jsonify({'data': data})
 
     def make_blueprints(self):

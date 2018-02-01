@@ -54,9 +54,9 @@ class YAMLBaseReader:
         return '/' + data['route']['name'] if data['route']['name'] else None
 
     @staticmethod
-    def get_type(data):
+    def get_fields(data):
         """
         :param data: An route object
         :return: An name of route
         """
-        return data['route']['type']
+        return data['route']['fields']

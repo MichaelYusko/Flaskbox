@@ -41,7 +41,7 @@ class Config(YAMLBaseReader):
         """
         :return: Return an array with fields objects, not completed yet
         """
-        value_type = self.get_type(self._get_config())
+        value_type = self.get_fields(self._get_config())
         return value_type
 
 
