@@ -1,6 +1,6 @@
 # Flaskbox
 
-Flaskbox - lightweight tool based on Flask framework, which help you to mock an easy APIs based on yaml file.
+Flaskbox - lightweight tool based on Flask framework, which help you mock easy an API.
 
 [![Build Status](https://travis-ci.org/MichaelYusko/Flaskbox.svg?branch=master)](https://travis-ci.org/MichaelYusko/Flaskbox)
 
