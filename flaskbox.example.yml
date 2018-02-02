@@ -1,5 +1,12 @@
+# General application configurations
 - application:
     name: Flaskbox API
+
+# The /users rout
 - route:
+    fields:
+    - name: string
+    - last_name: string
+    - users: array_str
+    - ids: array_int
     name: users
-    fields: [name: string, last_name: integer, companies: array_str, salaries: array_float]
