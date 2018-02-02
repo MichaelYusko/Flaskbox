@@ -24,7 +24,7 @@ And then you able to run your mock server.
 python -m flaskbox --start
 ```
 
-after that go to `localhost:5000/users' and you will see a response
+after that go to `localhost:5000/users` and you will see a response
 
 something like this
 ```
