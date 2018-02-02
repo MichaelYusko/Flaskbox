@@ -1,5 +1,6 @@
-from faker import Faker
 import random
+
+from faker import Faker
 
 
 class FakeDate:
@@ -73,5 +74,3 @@ class FakeDate:
 
 # instance of FakeData class
 fake_data = FakeDate()
-
-
