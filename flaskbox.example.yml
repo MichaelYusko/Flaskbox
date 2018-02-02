@@ -2,4 +2,4 @@
     name: Flaskbox API
 - route:
     name: users
-    fields: [{name: string}, {last_name: integer}]
+    fields: [name: string, last_name: integer, companies: array_str, salaries: array_float]
