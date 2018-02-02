@@ -34,5 +34,3 @@ def create_init_file():
     """Create the flaskbox.yml file
     """
     _create_yml_file()
-
-
