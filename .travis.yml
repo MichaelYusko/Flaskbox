@@ -9,3 +9,5 @@ install:
 script:
   - flake8
   - isort
+notification:
+  email: false
