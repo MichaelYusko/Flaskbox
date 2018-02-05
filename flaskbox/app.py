@@ -18,12 +18,13 @@ class Application:
         self.port = self.config.port
 
     def add_blueprints(self):
+        """Adde a blueprint objects to an flask application
+        :return: An flask application with blueprints routes
         """
-        :return: An flask instance
-        """
-        bp = blueprint.make_blueprints()
-        for route in bp:
+        blueprints = blueprint.make_blueprints()
+        for route in blueprints:
             self.app.register_blueprint(route)
+        self.app.add_url_rule('/', 'base_route', blueprint.base_route)
         return self.app
 
     def run_server(self):

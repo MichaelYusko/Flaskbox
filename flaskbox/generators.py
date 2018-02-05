@@ -33,7 +33,15 @@ class BlueprintGenerator:
                      not completed yet
             make_blueprints Make a blueprint object,
                             add route name, and fake data.
+            base_route Add base route for a flask application
     """
+
+    @staticmethod
+    def base_route():
+        """Base route for an flaskbox API
+        :return: an dictionary, with welcome message
+        """
+        return jsonify({'data': {'message': 'Flaskbox mock server'}})
 
     @staticmethod
     def response():
@@ -48,9 +56,8 @@ class BlueprintGenerator:
         return jsonify({'data': data})
 
     def make_blueprints(self):
-        """"
-        Iterate the config routes object,
-        and make an Blueprint objects, also add into the blueprints array.
+        """"Iterate the config routes object,
+            and make an Blueprint objects, also add into the blueprints array.
         :return: An array with Blueprint objects
         """
         blueprints = []
