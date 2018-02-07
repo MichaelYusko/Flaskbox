@@ -1,6 +1,8 @@
 """Reader stuff"""
 
-from flaskbox.decorators import file_not_exists
+import sys
+
+from flaskbox import constants
 from flaskbox.reader_helper import read_file
 
 
@@ -16,10 +18,13 @@ class YAMLBaseReader:
             get_type return data type of route, not completed yet.
     """
 
-    @file_not_exists
     def read(self):
         """Read the flaskbox.yml file"""
-        return read_file()
+        try:
+            return read_file()
+        except FileNotFoundError:
+            print(constants.NOT_EXISTS_MESSAGE)
+            sys.exit(1)
 
     @staticmethod
     def get_name(data):
