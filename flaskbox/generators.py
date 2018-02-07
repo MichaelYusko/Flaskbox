@@ -1,9 +1,12 @@
 """Generator stuff"""
 
+import os
+import sys
+
 from flask import Blueprint, jsonify
 
+from flaskbox import constants
 from flaskbox.config import config
-from flaskbox.decorators import if_file_exists
 from flaskbox.fake_data import fake_data
 from flaskbox.helpers import create_init_file
 
@@ -16,12 +19,14 @@ class YAMLGenerator:
     """
 
     @staticmethod
-    @if_file_exists
     def create_file():
         """
         :return: The flaskbox.yml file
         """
         """Create the init file"""
+        if os.path.isfile('flaskbox.yml'):
+            print(constants.FILE_EXISTS_MESSAGE)
+            sys.exit(1)
         return create_init_file()
 
 
