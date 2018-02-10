@@ -15,7 +15,8 @@ base_configuration = [
                 {'name': 'string'},
                 {'last_name': 'string'},
                 {'users': 'array_str'},
-                {'ids': 'array_int'}
+                {'ids': 'array_int'},
+                {'created_at': 'datetime'}
             ]
         }
     }

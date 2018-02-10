@@ -11,7 +11,8 @@ class FakeDate:
     # default data type values
     _default_types = (
         'string', 'integer', 'boolean',
-        'float', 'array_int', 'array_str'
+        'float', 'array_int', 'array_str',
+        'datetime'
     )
 
     def _generate_values(self, data, count=8):
@@ -39,7 +40,7 @@ class FakeDate:
             field[key] = self.faker.random_number()
 
         if field[key] == 'float':
-            field[key] = random.uniform(1, 100)
+            field[key] = self.faker.pyfloat()
 
         if field[key] == 'array_str':
             field[key] = self._generate_values(self.faker.name)
@@ -48,7 +49,10 @@ class FakeDate:
             field[key] = self._generate_values(self.faker.random_number)
 
         if field[key] == 'boolean':
-            field[key] = bool(random.getrandbits(1))
+            field[key] = self.faker.pybool()
+
+        if field[key] == 'datetime':
+            field[key] = self.faker.date_time()
 
         return field
 
