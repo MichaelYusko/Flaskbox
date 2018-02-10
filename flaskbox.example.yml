@@ -4,9 +4,10 @@
 
 # The /users rout
 - route:
+    name: users
     fields:
     - name: string
     - last_name: string
     - users: array_str
     - ids: array_int
-    name: users
+    - created_at: datetime
