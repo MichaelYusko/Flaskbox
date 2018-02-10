@@ -30,32 +30,48 @@ something like this
 ```
 {
    data:{
+      created_at:"Tue, 20 Jan 1976 06:55:21 GMT",
       ids:[
-         40670,
+         73827,
+         8696,
+         83541,
+         366721320,
+         574,
          0,
-         47,
-         413,
-         95297288,
-         108771,
-         377,
-         3537
+         54973,
+         932
       ],
-      last_name:"Zachary Marshall",
-      name:"Mrs. Robin Myers",
+      last_name:"Terry Clark",
+      name:"Benjamin Adkins",
       users:[
-         "Jason Thompson",
-         "Amy Watkins",
-         "Brett Brown",
-         "Deborah Duncan",
-         "Jose Morgan",
-         "Janet Wade",
-         "Victor Douglas",
-         "Chad Wilson"
+         "Zachary Mejia",
+         "Shelley Smith",
+         "Fernando Smith",
+         "Christian Brown",
+         "Christina Santiago",
+         "Gary Porter",
+         "Jennifer Smith",
+         "Julie Burns"
       ]
    }
 }
 ```
 
+
+Available fake data types
+=========================
+Flaskbox generate a fake data for you, see the example [flaskbox.example](https://github.com/MichaelYusko/Flaskbox/blob/master/flaskbox.example.yml#L9) file or just look into the table below
+
+
+| Data type        | Example
+| ------------- |:-------------:|
+| string      | "Tokyo Ghoul"
+| integer      | 23
+| boolean | false
+| float   | 23.2|
+| array_int | [1, 2, 10, 54]
+| array_str | ["Death note", "Tokyo Ghoul", "Attack on Titan"]
+| datetime | Tue, 20 Jan 1976 06:55:21 GMT
 
 P.S the documentation will be update.
 
