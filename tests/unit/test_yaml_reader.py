@@ -29,4 +29,4 @@ def test_reader_fields(base_app):
     fields = None
     for route in routes:
         fields = reader.get_fields(route)
-    assert (isinstance(fields, list), len(fields)) == (True, 4)
+    assert (isinstance(fields, list), len(fields)) == (True, 5)

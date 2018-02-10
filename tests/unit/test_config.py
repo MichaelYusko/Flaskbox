@@ -21,7 +21,7 @@ def test_config_get_fields(base_app):
     routes = config.get_routes(base_app)
     for route in routes:
         fields = config.get_fields(route)
-    assert (isinstance(fields, list), len(fields)) == (True, 4)
+    assert (isinstance(fields, list), len(fields)) == (True, 5)
 
 
 def test_config_port_not_exists(base_app):
