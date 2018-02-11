@@ -2,7 +2,7 @@
 from faker import Faker
 
 
-class FakeDate:
+class FakeData:
     """Class for generating an fake data"""
     def __init__(self):
         self.faker = Faker()
@@ -76,4 +76,4 @@ class FakeDate:
 
 
 # instance of FakeData class
-fake_data = FakeDate()
+fake_data = FakeData()
