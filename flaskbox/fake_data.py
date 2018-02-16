@@ -1,5 +1,6 @@
 
 from faker import Faker
+import random
 
 
 class FakeData:
@@ -13,6 +14,13 @@ class FakeData:
         'float', 'array_int', 'array_str',
         'datetime'
     )
+
+    def _generate_random_string(self):
+        """Create an random string
+        :return: An random string
+        """
+        values = [self.faker.name(),  self.faker.text(), self.faker.address()]
+        return random.choice(values)
 
     def _generate_values(self, data, count=8):
         """
@@ -33,7 +41,7 @@ class FakeData:
                 output: {'name': 'Lionel Messi'}
         """
         if field[key] == 'string':
-            field[key] = self.faker.name()
+            field[key] = self._generate_random_string()
 
         if field[key] == 'integer':
             field[key] = self.faker.random_number()
