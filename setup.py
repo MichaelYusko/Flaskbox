@@ -25,7 +25,8 @@ setup_information = {
 requirements = [
     'flask==0.12.2',
     'click==6.7',
-    'Faker==0.8.8'
+    'Faker==0.8.8',
+    'pyaml==17.10.0'
 ]
 
 setup_information['install_requires'] = requirements

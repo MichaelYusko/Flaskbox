@@ -3,10 +3,11 @@
 Flaskbox - lightweight tool based on Flask framework, which help you mock easy an API.
 
 [![Build Status](https://travis-ci.org/MichaelYusko/Flaskbox.svg?branch=master)](https://travis-ci.org/MichaelYusko/Flaskbox)
+[![PyPI version](https://badge.fury.io/py/flaskbox.svg)](https://badge.fury.io/py/flaskbox)
 
 Installation
 =================================
-Not uploaded yet;(
+pip install flaskbox
 
 
 Usage
@@ -65,15 +66,14 @@ Flaskbox generate a fake data for you, see the example [flaskbox.example](https:
 
 | Data type        | Example
 | ------------- |:-------------:|
-| string      | "Tokyo Ghoul"
+| string      | "An random string"
 | integer      | 23
 | boolean | false
 | float   | 23.2|
 | array_int | [1, 2, 10, 54]
-| array_str | ["Death note", "Tokyo Ghoul", "Attack on Titan"]
+| array_str | ["Random string 1", "Random string 2", "Random string 3"]
 | datetime | Tue, 20 Jan 1976 06:55:21 GMT
 
-P.S the documentation will be update.
 
 Contribution
 =================================
