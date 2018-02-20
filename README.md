@@ -6,8 +6,10 @@ Flaskbox - lightweight tool based on Flask framework, which help you mock easy a
 [![PyPI version](https://badge.fury.io/py/flaskbox.svg)](https://badge.fury.io/py/flaskbox)
 
 Installation
-=================================
+============
+```
 pip install flaskbox
+```
 
 
 Usage
